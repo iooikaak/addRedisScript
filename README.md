@@ -8,7 +8,7 @@ High Performance Add Redis Key Script
 ### Features
 - 高性能，bechmark测试
 - 支持开10W协程并发插入redis
-- QPS可以达到10W
+- QPS可以达到100W
 
 #	依赖
 ## 硬件平台
