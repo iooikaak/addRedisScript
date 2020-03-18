@@ -2,12 +2,13 @@
 High Performance Add Redis Key Script
 
 ## 设计目标
-配套addRedisScript脚本，增加数据   
+配套delRedisScript脚本，增加数据   
  [delRedisScript](https://github.com/iooikaak/delRedisScript)
 
 ### Features
 - 高性能，bechmark测试
-- 支持开10W协程并发删除redis
+- 支持开10W协程并发插入redis
+- QPS可以达到10W
 
 #	依赖
 ## 硬件平台
