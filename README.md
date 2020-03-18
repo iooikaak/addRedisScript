@@ -22,6 +22,7 @@ High Performance Add Redis Key Script
 hp latebook pro 2核 8G内存 
 
 ### 开200个协程，插入10W条数据
+![image](https://github.com/iooikaak/addRedisScript/blob/master/pic/01.png)
 ```
 vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedisHost "127.0.0.1:6379" -readRedisPassword "" -writeRedisHost "127.0.0.1:6379" -writeRedisPassword "" -userIDMinNum 1 -userIDMaxNum 100000 -goRoutineCount 200
 2020/03/18 09:11:06 Add Redis Key Script Has Done!!!
@@ -29,6 +30,7 @@ vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedi
 ```
 QPS：100000/3.544013757= 28216
 ### 开1W个协程，插入1000W条数据
+![image](https://github.com/iooikaak/addRedisScript/blob/master/pic/02.png)
 ```
 vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedisHost "127.0.0.1:6379" -readRedisPassword "" -writeRedisHost "127.0.0.1:6379" -writeRedisPassword "" -userIDMinNum 1 -userIDMaxNum 10000000 -goRoutineCount 10000
 2020/03/18 09:14:57 Add Redis Key Script Has Done!!!
@@ -36,6 +38,7 @@ vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedi
 ```
 QPS: 10000000/21.488985590=465354
 ### 开5W个协程，插入1000W条数据
+![image](https://github.com/iooikaak/addRedisScript/blob/master/pic/03.png)
 ```
 vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedisHost "127.0.0.1:6379" -readRedisPassword "" -writeRedisHost "127.0.0.1:6379" -writeRedisPassword "" -userIDMinNum 1 -userIDMaxNum 10000000 -goRoutineCount 50000
 2020/03/18 09:17:42 Add Redis Key Script Has Done!!!
@@ -43,9 +46,11 @@ vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedi
 ```
 QPS: 10000000/10.818124643=924374
 ### 开10W个协程，插入1000W条数据
+![image](https://github.com/iooikaak/addRedisScript/blob/master/pic/04.png)
 ```
 vagrant@ubuntu-bionic:~/Dev/code/go/src/addRedisScript$ go run main.go -readRedisHost "127.0.0.1:6379" -readRedisPassword "" -writeRedisHost "127.0.0.1:6379" -writeRedisPassword "" -userIDMinNum 1 -userIDMaxNum 10000000 -goRoutineCount 100000
 2020/03/18 09:19:56 Add Redis Key Script Has Done!!!
 2020/03/18 09:19:56 Start Unix Time:1584523186976773055, End Unix Time:1584523196774139671, Run time:9797366616 
 ```
+
 QPS:10000000/9.797366616=1020682
